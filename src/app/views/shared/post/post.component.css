@@ -85,6 +85,10 @@ article>footer>div{
   display: flex;
 }
 
+article>footer>div>button{
+ cursor: pointer;
+}
+
 
 
 

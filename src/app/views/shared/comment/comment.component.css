@@ -1,0 +1,31 @@
+article{
+  background-color: var(--bgPrimary);
+  margin-bottom: 10px;
+
+  padding: 10px;
+}
+
+article>header{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+article>header>img{
+  width: 40px;
+}
+
+article>header>div>p{
+  font-weight: bold;
+}
+
+article>header>div>span{
+  color: var(--textSecondary);
+  font-size: 12px;
+}
+
+article>p{
+  margin-top: 10px;
+  border-left: 3px solid var(--primary);
+  padding: 5px 10px;
+}

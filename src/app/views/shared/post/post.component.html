@@ -2,29 +2,28 @@
   <header>
     <img src="/assets/profile.png" />
     <div>
-      <p>por [estudante]</p>
-      <span>em [data]</span>
+      <p>por {{post.Student.name}}</p>
+      <span>em {{post.created_at}}</span>
     </div>
   </header>
   <main>
     <div>
-      <h2>[titulo]</h2>
-      <p>[descricao]</p>
+      <h2>{{post.title}}</h2>
+      <p>{{post.description}}</p>
     </div>
-    <img src="https://media.bitdegree.org/storage/media/images/2018/12/node-js-interview-questions-logo-2-266x300.png"
-      alt="imagem do post" />
-    <footer>
-      <p>Front-end</p>
-      <p>CSS</p>
+    <img *ngIf="post.image" [src]="post.image" alt="imagem do post"/>
+    <footer >
+      <p *ngFor="let category of post.Categories">{{category.description}}</p>
     </footer>
   </main>
   <footer>
     <h3>
       Comentários
     </h3>
+    <app-comment *ngFor="let comment of post.Answers" [comment]="comment"></app-comment>
     <div>
-      <input placeholder="Comente este post" />
-      <button>Enviar</button>
+      <input placeholder="Comente este post"/>
+      <button (click)="sendComment()">Enviar</button>
     </div>
   </footer>
 </article>
