@@ -1,5 +1,5 @@
 <article>
-  <header>
+  <header [routerLink]="['/post-detail', {post: post.id}]">
     <img src="/assets/profile.png" />
     <div>
       <p>por {{post.Student.name}}</p>
@@ -23,7 +23,7 @@
     <app-comment *ngFor="let comment of post.Answers" [comment]="comment"></app-comment>
     <div>
       <input placeholder="Comente este post"/>
-      <button (click)="sendComment()">Enviar</button>
+      <button (click)="notify.emit()">Enviar</button>
     </div>
   </footer>
 </article>

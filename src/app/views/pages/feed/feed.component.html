@@ -1,4 +1,5 @@
 
+<app-top-bar></app-top-bar>
 <section>
-  <app-post *ngFor="let post of posts" [post]="post" ></app-post>
+  <app-post *ngFor="let post of posts" [post]="post" (notify)="saveComment()" ></app-post>
 </section>
