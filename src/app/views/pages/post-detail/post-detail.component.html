@@ -1,1 +1,26 @@
-<p>{{post}}</p>
+<article>
+  <header [routerLink]="['/post-detail', {post: post.id}]">
+    <img src="/assets/profile.png" />
+    <div>
+      <p>por {{post.Student.name}}</p>
+      <span>em {{post.created_at}}</span>
+    </div>
+  </header>
+  <main>
+    <div>
+      <h2>{{post.title}}</h2>
+      <p>{{post.description}}</p>
+    </div>
+    <img *ngIf="post.image" [src]="post.image" alt="imagem do post"/>
+    <footer >
+      <p *ngFor="let category of post.Categories">{{category.description}}</p>
+    </footer>
+  </main>
+  <footer>
+    <h3>
+      Comentários
+    </h3>
+    <app-comment *ngFor="let comment of post.Answers" [comment]="comment"></app-comment>
+  </footer>
+</article>
+

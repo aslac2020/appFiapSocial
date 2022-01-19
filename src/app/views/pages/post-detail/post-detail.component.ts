@@ -1,3 +1,4 @@
+import { PostService } from 'src/app/services/post.service';
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 
@@ -12,12 +13,13 @@ export class PostDetailComponent implements OnInit {
 
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute, private postService: PostService
   ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-     this.post = params.get("post")
+     const postId = parseInt(params.get("post") || "0");
+     this.post = this.postService.getPostById(postId)
     })
   }
 

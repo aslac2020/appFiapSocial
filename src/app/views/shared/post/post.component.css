@@ -10,6 +10,13 @@ article>header{
   display: flex;
   align-items: center;
   gap: 10px;
+
+  cursor: pointer;
+  transition: .2s;
+}
+
+article>header:hover{
+  color: var(--primary);
 }
 
 article>header>div>p{
