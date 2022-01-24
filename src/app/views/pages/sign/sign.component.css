@@ -7,6 +7,7 @@ section {
   justify-content: center;
 }
 
+
 section>form {
   width: 50%;
   max-width: 300px;
@@ -24,6 +25,11 @@ section>form {
 
 section>form>img {
   width: 100px;
+}
+
+section>form>span {
+  color: red;
+  font-size: 12px;
 }
 
 section>form>a{

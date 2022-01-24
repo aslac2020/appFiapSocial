@@ -1,0 +1,16 @@
+<section>
+  <form [formGroup]="checkoutForm" (ngSubmit)="cadastrar()">
+    <img src="/assets/logo.png" />
+    <input type="number" placeholder="Ra" formControlName="ra" required />
+    <span *ngIf="checkoutForm.controls.email.errors?.maxLength">Ra inválido</span>
+    <input type="text" placeholder="Nome" formControlName="name" />
+    <input type="email" placeholder="Email" formControlName="email" />
+    <!-- <span *ngIf="checkoutForm.controls.email.invalid?.required">Campo Obrigatório</span>
+    <span *ngIf="checkoutForm.controls.email.errors?.touched">E-mail inválido</span> -->
+    <input type="password" placeholder="Senha" formControlName="password" />
+    <button>Entrar</button>
+    <p>Já é cadastrado?</p>
+    <a routerLink="">Login</a>
+  </form>
+</section>
+

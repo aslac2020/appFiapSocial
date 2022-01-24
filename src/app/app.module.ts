@@ -11,6 +11,7 @@ import { CommentComponent } from './views/shared/comment/comment.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { PostDetailComponent } from './views/pages/post-detail/post-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SignComponent } from './views/pages/sign/sign.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommentComponent,
     LoginComponent,
     PostDetailComponent,
+    SignComponent,
 
   ],
   imports: [

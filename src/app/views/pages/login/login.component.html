@@ -1,8 +1,10 @@
 <section>
-  <form>
+  <form [formGroup]="checkoutForm" (ngSubmit)="login()">
     <img src="/assets/logo.png" />
-    <input type="text" placeholder="E-mail" />
-    <input type="password" placeholder="Senha" />
-    <button type="button" (click)="login()">Entrar</button>
+    <input type="email" placeholder="E-mail" formControlName="email" />
+    <input type="password" placeholder="Senha" formControlName="password" />
+    <button>Entrar</button>
+    <p>Não é cadastrado?</p>
+    <a routerLink="/sign">Cadastre-se</a>
   </form>
 </section>

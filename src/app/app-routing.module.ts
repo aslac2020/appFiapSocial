@@ -3,11 +3,17 @@ import { FeedComponent } from './views/pages/feed/feed.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SignComponent } from './views/pages/sign/sign.component';
 
 const routes: Routes = [
   {
     path:  '',
     component: LoginComponent
+  },
+  {
+    path: 'sign',
+    component: SignComponent
+
   },
   {
     path: 'feed',
